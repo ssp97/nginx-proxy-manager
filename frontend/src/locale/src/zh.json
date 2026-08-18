@@ -1,4 +1,61 @@
 {
+	"2fa.backup-codes-remaining": {
+		"defaultMessage": "剩余备用验证码：{count}"
+	},
+	"2fa.backup-warning": {
+		"defaultMessage": "请将这些备用验证码保存在安全的地方。每个验证码只能使用一次。"
+	},
+	"2fa.disable": {
+		"defaultMessage": "停用双因素身份验证"
+	},
+	"2fa.disable-confirm": {
+		"defaultMessage": "停用双因素身份验证"
+	},
+	"2fa.disable-warning": {
+		"defaultMessage": "停用双因素身份验证会降低账户安全性。"
+	},
+	"2fa.disabled": {
+		"defaultMessage": "已停用"
+	},
+	"2fa.done": {
+		"defaultMessage": "我已保存备用验证码"
+	},
+	"2fa.enable": {
+		"defaultMessage": "启用双因素身份验证"
+	},
+	"2fa.enabled": {
+		"defaultMessage": "已启用"
+	},
+	"2fa.enter-code": {
+		"defaultMessage": "输入验证码"
+	},
+	"2fa.enter-code-disable": {
+		"defaultMessage": "输入验证码以停用"
+	},
+	"2fa.regenerate": {
+		"defaultMessage": "重新生成"
+	},
+	"2fa.regenerate-backup": {
+		"defaultMessage": "重新生成备用验证码"
+	},
+	"2fa.regenerate-instructions": {
+		"defaultMessage": "输入验证码以生成新的备用验证码。旧验证码将失效。"
+	},
+	"2fa.secret-key": {
+		"defaultMessage": "密钥"
+	},
+	"2fa.setup-instructions": {
+		"defaultMessage": "使用身份验证器应用扫描此二维码，或手动输入密钥。"
+	},
+	"2fa.status": {
+		"defaultMessage": "状态"
+	},
+	"2fa.title": {
+		"defaultMessage": "双因素身份验证"
+	},
+	"2fa.verify-enable": {
+		"defaultMessage": "验证并启用"
+	},
 	"access-list": {
 		"defaultMessage": "通信规则"
 	},
@@ -9,10 +66,10 @@
 		"defaultMessage": "{count} 个用户"
 	},
 	"access-list.help-rules-last": {
-		"defaultMessage": "当至少存在1条规则时，此拒绝所有规则将被添加到最后"
+		"defaultMessage": "至少存在 1 条规则时，此“拒绝所有”规则会被添加到末尾"
 	},
 	"access-list.help.rules-order": {
-		"defaultMessage": " 允许 (allow) 和禁止 (deny) 规则将按照它们定义的顺序执行。"
+		"defaultMessage": "请注意，允许（allow）和拒绝（deny）指令会按定义顺序执行。"
 	},
 	"access-list.pass-auth": {
 		"defaultMessage": "将认证传递给上游"
@@ -23,11 +80,14 @@
 	"access-list.public.subtitle": {
 		"defaultMessage": "无需基本认证"
 	},
+	"access-list.rule-source.placeholder": {
+		"defaultMessage": "192.168.1.100 或 192.168.1.0/24 或 2001:0db8::/32"
+	},
 	"access-list.satisfy-any": {
 		"defaultMessage": "满足任意条件"
 	},
 	"access-list.subtitle": {
-		"defaultMessage": "{users} 个用户, {rules} 条规则 - 创建时间: {date}"
+		"defaultMessage": "{users} 个用户，{rules} 条规则 - 创建时间：{date}"
 	},
 	"access-lists": {
 		"defaultMessage": "通信规则"
@@ -36,13 +96,19 @@
 		"defaultMessage": "添加"
 	},
 	"action.add-location": {
-		"defaultMessage": "添加路径规则(Location)"
+		"defaultMessage": "添加路径规则（Location）"
+	},
+	"action.allow": {
+		"defaultMessage": "允许"
 	},
 	"action.close": {
 		"defaultMessage": "关闭"
 	},
 	"action.delete": {
 		"defaultMessage": "删除"
+	},
+	"action.deny": {
+		"defaultMessage": "拒绝"
 	},
 	"action.disable": {
 		"defaultMessage": "禁用"
@@ -67,6 +133,9 @@
 	},
 	"auditlogs": {
 		"defaultMessage": "审计日志"
+	},
+	"auto": {
+		"defaultMessage": "自动"
 	},
 	"cancel": {
 		"defaultMessage": "取消"
@@ -114,19 +183,22 @@
 		"defaultMessage": "凭据文件内容"
 	},
 	"certificates.dns.credentials-note": {
-		"defaultMessage": "此插件需要一个包含 API 令牌或提供商其他凭证的配置文件"
+		"defaultMessage": "此插件需要一个包含 API 令牌或其他提供商凭据的配置文件"
 	},
 	"certificates.dns.credentials-warning": {
-		"defaultMessage": "此数据将以明文形式存储在数据库和文件中！"
+		"defaultMessage": "这些数据将以明文形式存储在数据库和文件中！"
 	},
 	"certificates.dns.propagation-seconds": {
-		"defaultMessage": "传播时间 (秒)"
+		"defaultMessage": "传播等待时间（秒）"
 	},
 	"certificates.dns.propagation-seconds-note": {
-		"defaultMessage": "留空以使用插件默认值。等待DNS传播的秒数。"
+		"defaultMessage": "留空以使用插件的默认值。等待 DNS 传播的秒数。"
 	},
 	"certificates.dns.provider": {
 		"defaultMessage": "DNS 提供商"
+	},
+	"certificates.dns.provider.placeholder": {
+		"defaultMessage": "选择提供商…"
 	},
 	"certificates.dns.warning": {
 		"defaultMessage": "本节需要您具备一些关于 Certbot 及其 DNS 插件的知识，请参阅相应插件的官方文档。"
@@ -135,7 +207,7 @@
 		"defaultMessage": "在此域名下找到了一个服务器，但它似乎不是 Nginx 代理管理器。请确保您的域名指向 NPM 实例运行的 IP 地址。"
 	},
 	"certificates.http.reachability-failed-to-check": {
-		"defaultMessage": "由于与site24x7.com通信错误，无法检查可达性。"
+		"defaultMessage": "由于与 site24x7.com 通信错误，无法检查可达性。"
 	},
 	"certificates.http.reachability-not-resolved": {
 		"defaultMessage": "此域名下没有可用的服务器。请确保您的域名存在并指向NPM实例运行的 IP 地址，如有必要，请在路由器中转发 80 端口。"
@@ -159,7 +231,7 @@
 		"defaultMessage": "密钥类型"
 	},
 	"certificates.key-type-description": {
-		"defaultMessage": "RSA 兼容性更好，ECDSA 更快更安全但旧系统可能不支持"
+		"defaultMessage": "RSA 兼容性更好；ECDSA 更快、更安全，但旧系统可能不支持。"
 	},
 	"certificates.key-type-ecdsa": {
 		"defaultMessage": "ECDSA 256"
@@ -201,7 +273,7 @@
 		"defaultMessage": "过期时间"
 	},
 	"column.http-code": {
-		"defaultMessage": "访问"
+		"defaultMessage": "HTTP 状态码"
 	},
 	"column.incoming-port": {
 		"defaultMessage": "入站端口"
@@ -264,7 +336,7 @@
 		"defaultMessage": "域名"
 	},
 	"domain-names.max": {
-		"defaultMessage": "{count} 个最多域名数量"
+		"defaultMessage": "最多 {count} 个域名"
 	},
 	"domain-names.placeholder": {
 		"defaultMessage": "开始输入以添加域名..."
@@ -294,7 +366,7 @@
 		"defaultMessage": "信任上游代理传递的协议类型头"
 	},
 	"domains.use-dns": {
-		"defaultMessage": "使用DNS验证"
+		"defaultMessage": "使用 DNS 验证"
 	},
 	"email-address": {
 		"defaultMessage": "邮箱地址"
@@ -303,7 +375,7 @@
 		"defaultMessage": "未找到结果"
 	},
 	"empty-subtitle": {
-		"defaultMessage": "为什么不由您来创建一个呢？"
+		"defaultMessage": "为什么不创建一个？"
 	},
 	"enabled": {
 		"defaultMessage": "已启用"
@@ -318,7 +390,7 @@
 		"defaultMessage": "无效的邮箱或密码"
 	},
 	"error.invalid-domain": {
-		"defaultMessage": "无效的域名: {domain}"
+		"defaultMessage": "无效的域名：{domain}"
 	},
 	"error.invalid-email": {
 		"defaultMessage": "无效的邮箱地址"
@@ -345,7 +417,7 @@
 		"defaultMessage": "此项为必填项"
 	},
 	"expires.on": {
-		"defaultMessage": "过期时间: {date}"
+		"defaultMessage": "过期时间：{date}"
 	},
 	"footer.github-fork": {
 		"defaultMessage": "在 Github 上复刻 (Fork) 本项目"
@@ -363,7 +435,7 @@
 		"defaultMessage": "协议"
 	},
 	"host.flags.websockets-upgrade": {
-		"defaultMessage": "Websockets 支持"
+		"defaultMessage": "WebSocket 支持"
 	},
 	"host.forward-port": {
 		"defaultMessage": "转发端口"
@@ -387,7 +459,22 @@
 		"defaultMessage": "Let's Encrypt HTTP 验证"
 	},
 	"loading": {
-		"defaultMessage": "加载中···"
+		"defaultMessage": "加载中…"
+	},
+	"login.2fa-code": {
+		"defaultMessage": "验证码"
+	},
+	"login.2fa-code-placeholder": {
+		"defaultMessage": "输入验证码"
+	},
+	"login.2fa-description": {
+		"defaultMessage": "输入身份验证器应用生成的验证码"
+	},
+	"login.2fa-title": {
+		"defaultMessage": "双因素身份验证"
+	},
+	"login.2fa-verify": {
+		"defaultMessage": "验证"
 	},
 	"login.title": {
 		"defaultMessage": "登录您的账户"
@@ -408,7 +495,7 @@
 		"defaultMessage": "很抱歉，您要查找的页面未找到"
 	},
 	"notfound.title": {
-		"defaultMessage": "糟糕...您刚刚找到了一个错误页面"
+		"defaultMessage": "糟糕……您找到了一个错误页面"
 	},
 	"notification.error": {
 		"defaultMessage": "错误"
@@ -536,6 +623,24 @@
 	"redirection-hosts.count": {
 		"defaultMessage": "{count} 个重定向主机"
 	},
+	"redirection-hosts.http-code.300": {
+		"defaultMessage": "300 多种选择"
+	},
+	"redirection-hosts.http-code.301": {
+		"defaultMessage": "301 永久移动"
+	},
+	"redirection-hosts.http-code.302": {
+		"defaultMessage": "302 临时移动"
+	},
+	"redirection-hosts.http-code.303": {
+		"defaultMessage": "303 查看其他位置"
+	},
+	"redirection-hosts.http-code.307": {
+		"defaultMessage": "307 临时重定向"
+	},
+	"redirection-hosts.http-code.308": {
+		"defaultMessage": "308 永久重定向"
+	},
 	"role.admin": {
 		"defaultMessage": "管理员"
 	},
@@ -549,7 +654,7 @@
 		"defaultMessage": "设置"
 	},
 	"settings": {
-		"defaultMessage": "设置列表"
+		"defaultMessage": "设置"
 	},
 	"settings.default-site": {
 		"defaultMessage": "默认站点"
@@ -593,6 +698,9 @@
 	"stream.forward-host": {
 		"defaultMessage": "转发主机"
 	},
+	"stream.forward-host.placeholder": {
+		"defaultMessage": "example.com 或 10.0.0.1 或 2001:db8:3333:4444:5555:6666:7777:8888"
+	},
 	"stream.incoming-port": {
 		"defaultMessage": "入站端口"
 	},
@@ -610,6 +718,9 @@
 	},
 	"test": {
 		"defaultMessage": "测试"
+	},
+	"update-available": {
+		"defaultMessage": "有可用更新：{latestVersion}"
 	},
 	"user": {
 		"defaultMessage": "用户"
@@ -652,6 +763,9 @@
 	},
 	"user.switch-light": {
 		"defaultMessage": "切换到浅色模式"
+	},
+	"user.two-factor": {
+		"defaultMessage": "双因素身份验证"
 	},
 	"username": {
 		"defaultMessage": "用户名"
